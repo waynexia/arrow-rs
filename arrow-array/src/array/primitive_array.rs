@@ -863,6 +863,23 @@ def_from_for_primitive!(Float32Type, f32);
 def_from_for_primitive!(Float64Type, f64);
 def_from_for_primitive!(Decimal128Type, i128);
 def_from_for_primitive!(Decimal256Type, i256);
+def_from_for_primitive!(TimestampSecondType, i64);
+def_from_for_primitive!(TimestampMillisecondType, i64);
+def_from_for_primitive!(TimestampMicrosecondArray, i64);
+def_from_for_primitive!(TimestampNanosecondType, i64);
+def_from_for_primitive!(Date32Type, i32);
+def_from_for_primitive!(Date64Type, i64);
+def_from_for_primitive!(Time32SecondType, i32);
+def_from_for_primitive!(Time32MillisecondType, i32);
+def_from_for_primitive!(Time64MicrosecondType, i64);
+def_from_for_primitive!(Time64NanosecondType, i64);
+def_from_for_primitive!(IntervalYearMonthType, i32);
+def_from_for_primitive!(IntervalDayTimeType, i64);
+def_from_for_primitive!(IntervalMonthDayNanoType, i128);
+def_from_for_primitive!(DurationSecondType, i64);
+def_from_for_primitive!(DurationMillisecondType, i64);
+def_from_for_primitive!(DurationMicrosecondType, i64);
+def_from_for_primitive!(DurationNanosecondType, i64);
 
 impl<T: ArrowPrimitiveType> From<Option<<T as ArrowPrimitiveType>::Native>>
     for NativeAdapter<T>
